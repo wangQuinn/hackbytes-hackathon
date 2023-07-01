@@ -5,11 +5,11 @@ import MainHeader from '../components/MainHeader.astro';
 ---
 
 <Layout title="VPCI Robotics">
-	<main class="container ">
+	<main class="container max-w-none">
 		<MainHeader/>
-		<div class="mx-4 instructions text-center">
+		<div class="mx-4 instructions text-center text-white hover:text-black card-hover blue">
 			<h2 class="text-4xl font-semibold p-2">Welcome</h2>
-			<p class="">
+			<p class="opacity-80">
 				Welcome to Team 4914, the Victoria Park Panthers. We are a student run FIRST Robotics <br> Competition (FRC) team at Victoria Park C.I. run by 3 mentors and over 100 students. 
 			</p>
 		<div>
@@ -20,6 +20,26 @@ import MainHeader from '../components/MainHeader.astro';
 	/* main {
 		padding: 1.5rem;
 	} */
+	.card-hover {
+		border: none;
+		background-size: 300% 100%;
+		moz-transition: all .6s ease-in-out;
+		-o-transition: all .6s ease-in-out;
+		-webkit-transition: all .6s ease-in-out;
+		transition: all .6s ease-in-out;
+	}
+	.card-hover:hover {
+		background-position: 100% 0;
+		moz-transition: all .6s ease-in-out;
+		-o-transition: all .6s ease-in-out;
+		-webkit-transition: all .6s ease-in-out;
+		transition: all .6s ease-in-out;
+		box-shadow: none;
+	}
+	.card-hover.blue {
+		background-image:linear-gradient(to right, rgb(0, 0, 0) 50%, rgb(225, 234, 238) 50%);
+    	box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.75);
+	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
